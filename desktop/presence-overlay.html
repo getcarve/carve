@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self' 'unsafe-inline'; script-src 'unsafe-inline'" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carve Presence</title>
+    <style>
+      /* One transparent, click-through window per display. It draws a frame
+         around every window Carve is attached to that the capsule is not
+         already framing. Frames are clipped to the part of their window that
+         other windows do not cover, so a frame never paints across whatever
+         sits in front. This layer has no controls and never takes input. */
+      :root { color-scheme: light dark; }
+      * { box-sizing: border-box; }
+      html, body { width: 100%; height: 100%; margin: 0; overflow: hidden; background: transparent; pointer-events: none; user-select: none; }
+    </style>
+    <link rel="stylesheet" href="window-presence.css" />
+  </head>
+  <body data-stale="false">
+    <svg width="0" height="0" aria-hidden="true" style="position:absolute">
+      <defs><linearGradient id="focus-spectrum" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#d9b6ff"/><stop offset="45%" stop-color="#b3a1ff"/><stop offset="72%" stop-color="#a4e1fa"/><stop offset="100%" stop-color="#70e2c2"/></linearGradient></defs>
+    </svg>
+    <div id="frames" aria-hidden="true"></div>
+    <script>
+      (() => {
+        const host = document.getElementById('frames')
+        const frames = new Map()
+        let lastStateReceivedAt = Date.now()
+        const px = (value) => `${Math.round(value)}px`
+        const presences = new Set(['selected', 'thinking', 'working', 'attention', 'paused', 'complete', 'background', 'waiting'])
+        // Visible pieces become one clip path in the frame's own box, so the
+        // glow, hairline, and outline are all cut together.
+        const clipPath = (frame) => {
+          const pieces = Array.isArray(frame.visible) ? frame.visible : []
+          if (pieces.length === 0) return 'inset(0 0 100% 0)'
+          const path = pieces.map((piece) => {
+            const x = Math.max(0, piece.x - frame.rect.x), y = Math.max(0, piece.y - frame.rect.y)
+            const width = Math.max(0, Math.min(frame.rect.width, piece.x + piece.width - frame.rect.x) - x)
+            const height = Math.max(0, Math.min(frame.rect.height, piece.y + piece.height - frame.rect.y) - y)
+            return width > 0 && height > 0 ? `M${x} ${y}h${width}v${height}h${-width}z` : ''
+          }).join('')
+          return path ? `path('${path}')` : 'inset(0 0 100% 0)'
+        }
+        const createFrame = () => {
+          const element = document.createElement('div')
+          element.className = 'frame'
+          element.innerHTML = '<svg class="focus-outline" aria-hidden="true"><rect class="focus-track" pathLength="100"/><rect class="focus-halo" pathLength="100"/><rect class="focus-comet" pathLength="100"/></svg>'
+          host.appendChild(element)
+          return element
+        }
+        const render = (state) => {
+          lastStateReceivedAt = Date.now()
+          document.body.dataset.stale = 'false'
+          const seen = new Set()
+          for (const frame of Array.isArray(state?.frames) ? state.frames : []) {
+            if (!frame || typeof frame.id !== 'string' || !frame.rect) continue
+            seen.add(frame.id)
+            const element = frames.get(frame.id) ?? createFrame()
+            frames.set(frame.id, element)
+            element.style.left = px(frame.rect.x); element.style.top = px(frame.rect.y)
+            element.style.width = px(frame.rect.width); element.style.height = px(frame.rect.height)
+            element.style.clipPath = clipPath(frame)
+            const presence = presences.has(frame.presence) ? frame.presence : 'background'
+            if (element.dataset.presence !== presence) element.dataset.presence = presence
+          }
+          for (const [id, element] of frames) if (!seen.has(id)) { element.remove(); frames.delete(id) }
+        }
+        window.stewardPresenceOverlay?.onState(render)
+        setInterval(() => { document.body.dataset.stale = String(Date.now() - lastStateReceivedAt > 5000) }, 1000)
+      })()
+    </script>
+  </body>
+</html>

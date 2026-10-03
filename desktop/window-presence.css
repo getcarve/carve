@@ -1,0 +1,74 @@
+      /* Window presence is decorative and entirely inside the verified target.
+         An empty center preserves the application's original contrast. The
+         capsule owns controls; this layer never accepts mouse input. */
+      .frame[data-presence] {
+        --focus-color: 181 143 244;
+        position: absolute; overflow: hidden; isolation: isolate; pointer-events: none;
+        border: 0; border-radius: 12px; background: transparent; box-shadow: none;
+        opacity: 1; transition: opacity 300ms ease;
+      }
+      .frame[data-presence]::before {
+        content: ''; position: absolute; inset: 0; border-radius: inherit;
+        pointer-events: none; opacity: .72;
+        box-shadow: inset 0 0 0 1px rgb(var(--focus-color) / 42%),
+          inset 0 0 14px 2px rgb(var(--focus-color) / 22%),
+          inset 0 0 44px 6px rgb(var(--focus-color) / 16%),
+          inset 0 0 90px 12px rgb(var(--focus-color) / 7%);
+      }
+      .frame[data-presence]::after {
+        content: ''; position: absolute; inset: 1px; border: 0; border-radius: 11px;
+        box-shadow: inset 0 0 0 1px #ffffff18; pointer-events: none;
+      }
+      .focus-outline { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
+      .focus-outline rect {
+        x: 1px; y: 1px; width: calc(100% - 2px); height: calc(100% - 2px);
+        rx: 11px; fill: none; stroke: url(#focus-spectrum); stroke-width: 1.5;
+        vector-effect: non-scaling-stroke; stroke-linecap: round;
+      }
+      .focus-track { opacity: .28; }
+      .focus-comet, .focus-halo { opacity: 0; stroke-dasharray: 16 84; stroke-dashoffset: 0; }
+      .focus-outline .focus-halo { stroke-width: 14px; filter: blur(7px); }
+      .focus-outline .focus-comet--echo { stroke-dasharray: 5 95; stroke-dashoffset: -50; stroke-width: 1px; }
+      .focus-outline .focus-arrival { opacity: 0; stroke-width: 8px; filter: blur(3px); }
+      /* One continuous breath through read/act/verify; phase stays in the capsule. */
+      .frame:is([data-presence="thinking"], [data-presence="working"])::before { animation: focus-breathe 4.8s ease-in-out infinite; }
+      .frame:is([data-presence="thinking"], [data-presence="working"]) .focus-track { opacity: .5; }
+      .frame[data-arriving="true"] .focus-arrival { animation: focus-enter 1500ms cubic-bezier(.16, 1, .3, 1) both; }
+      .frame[data-presence="attention"] { --focus-color: 233 177 95; }
+      .frame[data-presence="attention"] .focus-track { stroke: #e9b15f; opacity: .68; }
+      .frame[data-presence="paused"] { --focus-color: 170 175 190; }
+      .frame[data-presence="paused"]::before { opacity: .28; }
+      .frame[data-presence="paused"] .focus-track { stroke: #aab1c0; opacity: .25; }
+      .frame[data-presence="complete"] { --focus-color: 112 226 184; animation: focus-finish 1600ms ease-out both; }
+      .frame[data-presence="complete"] .focus-track { stroke: #8be8c5; opacity: .85; }
+      .frame[data-presence="selected"]::before { opacity: .25; }
+      .frame[data-presence="selected"] .focus-track { opacity: .2; }
+      body[data-frame="false"] .frame[data-presence], body[data-stale="true"] .frame[data-presence] { display: none !important; }
+      body[data-frame="false"] .frame *, body[data-frame="false"] .frame::before,
+      body[data-stale="true"] .frame *, body[data-stale="true"] .frame::before { animation: none !important; }
+      @keyframes focus-breathe { 0%, 100% { opacity: .58; } 50% { opacity: .92; } }
+      @keyframes focus-travel { to { stroke-dashoffset: -100; } }
+      @keyframes focus-travel-echo { to { stroke-dashoffset: -150; } }
+      @keyframes focus-enter {
+        0% { stroke-dasharray: 0 100; opacity: 0; }
+        15% { opacity: .8; }
+        65% { stroke-dasharray: 100 0; opacity: .6; }
+        100% { stroke-dasharray: 100 0; opacity: 0; }
+      }
+      @keyframes focus-finish { 0% { opacity: .45; } 22% { opacity: 1; } 100% { opacity: 0; } }
+
+      .frame[data-presence="background"]::before { opacity: .22; }
+      .frame[data-presence="background"] .focus-track { opacity: .18; }
+      .frame[data-presence="waiting"] { --focus-color: 233 177 95; }
+      .frame[data-presence="waiting"]::before { opacity: .45; }
+      .frame[data-presence="waiting"] .focus-track { stroke: #e9b15f; opacity: .4; }
+
+      @media (prefers-reduced-motion: reduce) {
+        .frame[data-presence], .frame[data-presence]::before, .frame[data-presence] * { animation: none !important; transition: none !important; }
+        .frame[data-presence="complete"] { opacity: 0; }
+        .frame[data-presence] .focus-arrival { display: none; }
+      }
+      @media (prefers-contrast: more) {
+        .frame[data-presence]::before { box-shadow: inset 0 0 0 2px rgb(var(--focus-color)); opacity: 1; animation: none; }
+      }
+

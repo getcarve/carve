@@ -1,0 +1,270 @@
+/* Capsule pages own layout. The legacy sheet retains annotation and pointer
+   visuals; it no longer decides which expanded-page regions are mounted. */
+body #badge.capsule-v2 {
+  --ink:#f6f3fb; --ink-soft:#e0dae9; --muted:#bbb5c8; --line:#44414e; --well:#302e3a; --primary-bg:#dbceff; --input-focus:#a58bcf;
+  display:flex; flex-direction:column; gap:0; padding:0; background:#25242d;
+  border:1px solid #504b5b; border-radius:22px; box-shadow:0 12px 30px #17112138;
+  backdrop-filter:none; -webkit-backdrop-filter:none; font-size:14px; line-height:1.5;
+  overflow:hidden; transition:border-radius 180ms ease;
+}
+#badge.capsule-v2 .badge-surface,#badge.capsule-v2 .light-edge,#badge.capsule-v2 .ring,#badge.capsule-v2 #step-rail,#badge.capsule-v2 #elapsed {display:none!important}
+#badge.capsule-v2 #capsule-parking,#badge.capsule-v2 [hidden] {display:none!important}
+#badge.capsule-v2 .row {display:flex;gap:10px;padding:12px 18px 0;min-height:48px;flex:none;white-space:nowrap}
+#badge.capsule-v2 .mark {width:20px;height:20px;flex:none;animation:none}
+#badge.capsule-v2 .orb-core {inset:1px;border-radius:50%;animation:none;background:#a899d0}
+#badge.capsule-v2 .orb-core::before,#badge.capsule-v2 .orb-core::after {animation:none}
+#badge.capsule-v2 #status-dot {display:none}
+#badge.capsule-v2 #lease {display:none!important}
+#badge.capsule-v2 .copy {display:none}
+#badge.capsule-v2 #capsule-context {font-size:12px;color:var(--muted);flex:1;overflow:hidden;text-overflow:ellipsis}
+#badge.capsule-v2 button {font:inherit;cursor:pointer;letter-spacing:0}
+#badge.capsule-v2 #capsule-more,#badge.capsule-v2 #stop-button,#badge.capsule-v2 #pause-button,#badge.capsule-v2 #turn-continue {display:inline-flex;align-items:center;justify-content:center;min-width:32px;min-height:32px;padding:6px 9px;border:0;border-radius:9px;background:transparent;color:var(--muted);box-shadow:none;font-size:12px}
+#badge.capsule-v2 #capsule-more {font-size:22px}
+#badge.capsule-v2 #stop-button[data-dismiss=true] {font-size:0;width:32px;padding:0}
+#badge.capsule-v2 #stop-button[data-dismiss=true]::after {content:'×';font-size:20px}
+#badge.capsule-v2 #stop-button:not([data-dismiss=true]),#badge.capsule-v2 #pause-button,#badge.capsule-v2 #turn-continue {background:#302e3a;color:var(--ink)}
+#badge.capsule-v2 #capsule-body {padding:18px 22px 20px;overflow:auto;min-height:0;flex:1 1 auto;scrollbar-width:thin;overscroll-behavior:contain;user-select:text}
+#badge.capsule-v2 #capsule-title {font-size:23px;line-height:1.25;letter-spacing:-.025em;font-weight:600;margin:0 0 12px;color:var(--ink)}
+#badge.capsule-v2 #capsule-description {color:var(--muted);font-size:14px;line-height:1.55;margin:0 0 16px;white-space:pre-wrap}
+#badge.capsule-v2 #capsule-footer {flex:none;padding:0 22px 18px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;min-width:0}
+#badge.capsule-v2 #capsule-footer:empty {display:none}
+#badge.capsule-v2 #capsule-footer > #notice {width:100%;margin:0;font-size:12px}
+#badge.capsule-v2 #answer {display:block;max-height:none;overflow:visible;padding:0;margin:0;background:none;border:0;border-radius:0;mask-image:none;font-size:15px;line-height:1.6;color:var(--ink)}
+#badge.capsule-v2 #answer:empty {display:none}
+#badge.capsule-v2 .answer-evidence {display:block!important;font-size:12px;color:var(--muted);margin-top:15px;white-space:normal}
+#badge.capsule-v2 .answer-evidence[data-verified=true] {color:#bfddcf}
+#badge.capsule-v2[data-page=result][data-verified=false] .orb-core::before {background:radial-gradient(ellipse at 25% 25%,#e5d8fb,#af9acb 60%,#9785b2)}
+#badge.capsule-v2 #follow-up {display:grid!important;grid-template-columns:minmax(0,1fr) 32px auto;grid-template-rows:auto auto;gap:8px;width:100%;margin:0;padding:14px 0 0;border:0;border-top:1px solid var(--line);background:none;border-radius:0;box-shadow:none}
+#badge.capsule-v2 #follow-up-input {grid-column:1/-1;grid-row:1;width:100%;padding:6px 8px;margin:0;min-height:56px;max-height:108px;background:none;border:0;border-radius:8px;color:var(--ink);font:inherit;font-size:15px;line-height:1.5;resize:none}
+#badge.capsule-v2 #follow-up-input::placeholder {color:#b1aabc}
+#badge.capsule-v2 #capsule-settings {grid-column:1;grid-row:2;text-align:left;align-self:center;padding:6px 0;border:0;background:none;font-size:11px;line-height:1.4;color:var(--muted)}
+#badge.capsule-v2 #mic {grid-column:2;grid-row:2;width:32px;height:34px;padding:7px;align-self:center;border:0;background:none;box-shadow:none;color:var(--muted)}
+#badge.capsule-v2 #follow-up-send {grid-column:3;grid-row:2;min-height:34px;min-width:40px;padding:8px 12px;border:0;border-radius:11px;background:#dbceff;color:#2b203f;box-shadow:none;font-size:12px;font-weight:650}
+#badge.capsule-v2 #expand {display:none!important}
+/* Recording status owns a separate row; legacy row 2 belongs to the controls. */
+#badge.capsule-v2 #dictation-status {display:none;grid-column:1/-1;grid-row:3;height:auto;min-width:0;align-items:baseline;font-size:12px;line-height:1.5;white-space:normal;overflow-wrap:anywhere}
+#badge.capsule-v2 #dictation-status::before {flex:0 0 5px}
+body[data-dictating=true] #badge.capsule-v2 #dictation-status {display:flex;visibility:visible}
+#badge.capsule-v2 #capsule-settings:disabled {opacity:.65;cursor:default}
+#badge.capsule-v2 .plan-row {display:flex!important;align-items:center;flex-wrap:wrap;gap:10px;width:100%;padding:0;margin:0;border:0}
+#badge.capsule-v2 .plan-row .plan-flex {display:none}
+#badge.capsule-v2 #plan-start {order:3;margin-left:auto}
+#badge.capsule-v2 #plan-adjust {order:1}
+#badge.capsule-v2 #plan-fresh {order:2;width:100%}
+#badge.capsule-v2 #plan-steps {display:grid;margin:18px 0 0;padding:0;background:none;border:0;max-height:none;overflow:visible;gap:16px}
+#badge.capsule-v2 #plan-steps li {padding:0;gap:12px;grid-template-columns:18px minmax(0,1fr);font-size:14px;line-height:1.55}
+#badge.capsule-v2 #plan-steps .n {color:#c5b3ef}
+#badge.capsule-v2 #plan-steps .t {overflow:visible;white-space:normal;display:block;-webkit-line-clamp:unset}
+#badge.capsule-v2 #route {margin:0;background:none;font-size:12px}
+#badge.capsule-v2 #decision-card {display:block;margin:0;padding:0;border:0;background:none;max-height:none;overflow:visible}
+#badge.capsule-v2 #decision-content {max-height:none;overflow:visible;padding:0}
+#badge.capsule-v2 #decision-title {display:none}
+#badge.capsule-v2 #decision-scope {font-size:14px;color:var(--muted);line-height:1.55;margin:0 0 16px}
+#badge.capsule-v2 #decision-details {border:0;background:none;padding:0;margin:0;border-radius:0}
+#badge.capsule-v2 #decision-facts,#badge.capsule-v2 #decision-details-facts {display:block;margin:0;padding:0;border:0;border-radius:0;background:none;font-size:14px;line-height:1.5}
+#badge.capsule-v2 #decision-facts dt,#badge.capsule-v2 #decision-details-facts dt {color:var(--muted);font-size:12px;margin-top:16px}
+#badge.capsule-v2 #decision-facts dd,#badge.capsule-v2 #decision-details-facts dd {margin:5px 0 0;white-space:pre-wrap}
+#badge.capsule-v2 #decision-details summary {font-size:12px;color:var(--muted);padding:0;margin-top:16px}
+#badge.capsule-v2 #decision-details[open] {margin-bottom:0}
+#badge.capsule-v2 #decision-approve,#badge.capsule-v2 #plan-start,#badge.capsule-v2 #budget-grant,#badge.capsule-v2 #failure-retry,#badge.capsule-v2 #guide-allow,#badge.capsule-v2 #audio-sharing-allow {width:auto;min-height:40px;padding:10px 16px;background:#dbceff;color:#2b203f;border:0;border-radius:11px;box-shadow:none;font-size:13px;font-weight:650}
+#badge.capsule-v2 #decision-approve {margin-left:auto;order:2;flex:1}
+#badge.capsule-v2 #capsule-end {order:0}
+#badge.capsule-v2 #capsule-end,#badge.capsule-v2 #capsule-back,#badge.capsule-v2 .ghost,#badge.capsule-v2 #budget-stop,#badge.capsule-v2 #failure-expand,#badge.capsule-v2 #handoff-decline {padding:8px 0;border:0;border-radius:8px;min-height:36px;background:none;color:var(--muted);box-shadow:none;font-size:13px}
+#badge.capsule-v2 #capsule-options,#badge.capsule-v2 #capsule-preferences {display:grid;gap:12px}
+#badge.capsule-v2 #capsule-options > button {display:block!important;text-align:left;border:0;border-bottom:1px solid var(--line);border-radius:0;background:none;color:var(--ink);padding:10px 0;min-height:40px;font-size:14px}
+#badge.capsule-v2 #capsule-options > button[hidden] {display:none!important}
+#badge.capsule-v2 #capsule-sharing-status,#badge.capsule-v2 #capsule-options-note,#badge.capsule-v2 #capsule-policy-note {font-size:12px;line-height:1.6;color:var(--muted);margin:0}
+#badge.capsule-v2 #approval-setting {display:flex;margin:10px 0;flex-direction:column;align-items:stretch;gap:10px;color:var(--muted);font-size:12px}
+#badge.capsule-v2 #approval-preset {padding:10px;background:#302e3a;border:1px solid #504b5b;font-size:14px;min-height:42px;border-radius:10px}
+#badge.capsule-v2 #assistance-modes {align-self:start;display:flex;padding:3px;border:0;background:#302e3a;border-radius:10px}
+#badge.capsule-v2 #assistance-modes button {min-height:36px;padding:8px 12px;border-radius:8px}
+#badge.capsule-v2 #assistance-modes button[aria-pressed=true] {background:#dbceff}
+#badge.capsule-v2 .failure-row {display:flex;gap:12px;flex-wrap:wrap;margin:0;padding:0;border:0;background:none}
+#badge.capsule-v2 .failure-row > span {width:100%}
+#badge.capsule-v2 .failure-row b {display:none}
+#badge.capsule-v2 #failure-detail {display:block;color:var(--muted);font-size:14px;line-height:1.6;white-space:normal}
+#badge.capsule-v2 #failure-autopilot {display:none!important}
+#badge.capsule-v2 #guidance-row {display:grid;grid-template-columns:minmax(0,1fr);gap:12px;margin:0;min-width:0}
+#badge.capsule-v2 #guidance-row .guidance-context {color:var(--muted);white-space:normal;overflow-wrap:anywhere;font-size:14px;line-height:1.55;margin:0}
+#badge.capsule-v2 #guidance-row button {text-align:left;min-width:0;white-space:normal;overflow-wrap:anywhere;min-height:42px;padding:12px 0;border:0;border-bottom:1px solid var(--line);border-radius:0;background:none;color:var(--ink);font-size:14px}
+#badge.capsule-v2 #guidance-row button small {display:block;color:var(--muted);margin-top:4px;font-size:12px}
+#badge.capsule-v2 #budget-row {display:grid;gap:16px;background:none;border:0;margin:0;padding:0}
+#badge.capsule-v2 .budget-row__actions {display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+#badge.capsule-v2 .work-consent,#badge.capsule-v2 .audio-sharing {background:none;border:0;padding:0;margin:0;font-size:13px;line-height:1.6}
+#badge.capsule-v2 .work-consent,#badge.capsule-v2 .audio-sharing,#badge.capsule-v2 .sharing-remember {color:var(--ink)}
+#badge.capsule-v2 .sharing-scope span,#badge.capsule-v2 .work-consent > small,#badge.capsule-v2 #guide-consent-note,#badge.capsule-v2 #audio-sharing-copy,#badge.capsule-v2 #audio-sharing-duration {color:var(--muted)}
+#badge.capsule-v2 #guide-consent-row {display:flex!important;flex-wrap:wrap;gap:14px;margin:0}
+#badge.capsule-v2 #guide-consent-note {width:100%;font-size:13px;line-height:1.6}
+#badge.capsule-v2 #guide-row {margin-top:16px;border-top:1px solid var(--line);padding-top:12px}
+#badge.capsule-v2 #guide-grounding {font-size:12px}
+#badge.capsule-v2 button:focus-visible,#badge.capsule-v2 select:focus-visible,#badge.capsule-v2 textarea:focus-visible {outline:2px solid #dbceff;outline-offset:3px}
+#badge.capsule-v2 button[data-enter-default]:focus {outline:2px solid var(--input-focus);outline-offset:3px}
+#badge.capsule-v2 button:disabled {opacity:.55;cursor:default}
+#badge.capsule-v2 #follow-up-input:focus-visible {outline:1px solid var(--input-focus);outline-offset:2px}
+#badge.capsule-v2[data-page=paused] #capsule-body {padding-bottom:16px}
+#badge.capsule-v2[data-page=paused] #capsule-description {margin-bottom:0}
+#badge.capsule-v2[data-page=paused] #follow-up-send {min-height:40px;padding:10px 16px;font-size:13px}
+body[data-tier=line] #badge.capsule-v2 {min-height:68px;border-radius:22px}
+body[data-tier=line] #badge.capsule-v2 .row {padding:12px;min-height:66px;gap:8px;width:100%;min-width:0}
+body[data-tier=line] #badge.capsule-v2 .copy__heading {display:block;min-width:0;white-space:normal}
+body[data-tier=line] #badge.capsule-v2 #app::before {display:none}
+body[data-tier=line] #badge.capsule-v2 #stop-button,body[data-tier=line] #badge.capsule-v2 #pause-button,body[data-tier=line] #badge.capsule-v2 #turn-continue {flex:none}
+body[data-tier=line] #badge.capsule-v2 .copy {display:block;flex:1;min-width:0}
+body[data-tier=line] #badge.capsule-v2 #label {font-size:13px;line-height:1.5;font-weight:550;max-width:190px}
+body[data-tier=line] #badge.capsule-v2 #app {display:block!important;font-size:11px;color:var(--muted);margin:0}
+body[data-tier=line] #badge.capsule-v2 #capsule-context,body[data-tier=line] #badge.capsule-v2 #capsule-more {display:none}
+body[data-tier=line] #badge.capsule-v2 #pause-button:not([hidden]) {display:inline-flex!important}
+body[data-tier=line] #badge.capsule-v2 #stop-button::before {display:none}
+body[data-tier=line] #badge.capsule-v2 #stop-button {font-size:12px}
+/* One centered sphere inside a stable 48px restore target. No outer disc. */
+body[data-tier=dot] #badge.capsule-v2 {display:grid;place-items:center;width:48px!important;min-width:48px;height:48px;min-height:48px;padding:0;border:0;border-radius:50%;background:transparent;box-shadow:none;animation:none;transition:none;overflow:hidden}
+body[data-tier=dot] #badge.capsule-v2 .row {display:grid;place-items:center;grid-template-columns:1fr;width:48px;height:48px;min-height:0;padding:0;gap:0}
+body[data-tier=dot] #badge.capsule-v2 .row > :not(.mark) {display:none!important}
+body[data-tier=dot] #badge.capsule-v2 .mark {width:40px;height:40px;transform:none;filter:none;animation:none;transition:filter 120ms ease}
+body[data-tier=dot] #badge.capsule-v2 .mark::after {display:none}
+body[data-tier=dot] #badge.capsule-v2 .mark > .orb-core {inset:0;border-radius:50%;background:radial-gradient(circle at 28% 22%,#f4eaff 0%,#c9b5eb 26%,#9fbce0 54%,#79cdbc 85%,#6bb5af 100%);box-shadow:inset 0 1px 2px #ffffff88,inset 0 -1px 3px #42698733,0 2px 4px #25203530;filter:none;animation:none}
+body[data-tier=dot] #badge.capsule-v2 .orb-core::before,body[data-tier=dot] #badge.capsule-v2 .orb-core::after {display:none}
+body[data-tier=dot] #badge.capsule-v2 #restore-carve:hover ~ .row .mark {transform:none;filter:brightness(1.08)}
+body[data-tier=dot] #badge.capsule-v2 #restore-carve:active ~ .row .mark {transform:none;filter:brightness(.95)}
+body[data-tier=dot] #badge.capsule-v2 #restore-carve:focus-visible {outline:2px solid var(--input-focus);outline-offset:-2px}
+@media(prefers-color-scheme:light){body #badge.capsule-v2 {--ink:#292430;--ink-soft:#393140;--muted:#655e70;--line:#ddd6e4;--well:#eee9f3;--link-ink:#664293;--source-hover:#e5deed;--input-focus:#9b7cbd;background:#faf8fd;border-color:#d4cbdc;box-shadow:0 12px 30px #21182a24}#badge.capsule-v2 #follow-up-input::placeholder{color:#746b80}#badge.capsule-v2 #stop-button:not([data-dismiss=true]),#badge.capsule-v2 #pause-button,#badge.capsule-v2 #turn-continue,#badge.capsule-v2 #assistance-modes,#badge.capsule-v2 #approval-preset{background:#eee9f3}#badge.capsule-v2 .answer-evidence[data-verified=true]{color:#32684e}}
+
+#badge.capsule-v2[data-page=approval] .row #stop-button,#badge.capsule-v2[data-page=question] .row #stop-button,#badge.capsule-v2[data-page=budget] .row #stop-button,#badge.capsule-v2[data-page=paused] .row #pause-button {display:none}
+
+#badge.capsule-v2 #capsule-preferences #approval-setting {display:none}
+#badge.capsule-v2 #capsule-policy-choices {margin:6px 0;padding:0;border:0;min-width:0}
+#badge.capsule-v2 #capsule-policy-choices legend {font-size:12px;color:var(--muted);padding:0 0 8px}
+#badge.capsule-v2 #capsule-policy-choices label {display:flex;align-items:flex-start;gap:12px;padding:14px 0;border-bottom:1px solid var(--line);font-size:14px;cursor:pointer}
+#badge.capsule-v2 #capsule-policy-choices input {accent-color:#b99bfb;margin:3px 0 0;width:16px;height:16px;flex:none}
+#badge.capsule-v2 #capsule-policy-choices small {display:block;font-size:12px;line-height:1.5;color:var(--muted);margin-top:4px}
+#badge.capsule-v2 #capsule-policy-choices label:has(input:disabled) {opacity:.65;cursor:default}
+
+#badge.capsule-v2 #capsule-policy-caption {display:block;color:var(--muted);font-size:12px;margin-bottom:12px}
+
+/* Source actions keep a visible keyboard ring in either appearance. */
+#badge.capsule-v2 .answer-source:focus-visible,#badge.capsule-v2 .answer-citation:focus-visible {outline-color:var(--link-ink)}
+
+/* Handoffs have one paired decision row; Stop remains available in the header. */
+#badge.capsule-v2[data-page=approval][data-decision=handoff] .row #stop-button {display:inline-flex;background:transparent;color:var(--muted)}
+#badge.capsule-v2[data-page=approval][data-decision=handoff] #capsule-footer {display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:stretch}
+#badge.capsule-v2[data-page=approval][data-decision=handoff] #handoff-decline,#badge.capsule-v2[data-page=approval][data-decision=handoff] #decision-approve {width:auto;min-width:0;margin:0;min-height:40px;padding:10px 12px;white-space:normal;overflow-wrap:anywhere}
+#badge.capsule-v2[data-page=approval][data-decision=handoff] #handoff-decline {order:0;background:var(--well);color:var(--ink);border-radius:11px}
+#badge.capsule-v2[data-page=approval][data-decision=handoff] #notice {grid-column:1/-1;order:3}
+
+/* State changes are quiet: no per-verb bounce, looping orb, or legacy arrival.
+   The page renderer fades content once per transition; controls never move. */
+#badge.capsule-v2 .mark,#badge.capsule-v2 .mark > span.orb-core,
+#badge.capsule-v2 .copy__heading strong[data-turn=true],
+#badge.capsule-v2 .meta,#badge.capsule-v2 #decision-card,#badge.capsule-v2 .budget-row {animation:none}
+#badge.capsule-v2[data-page=result][data-verified=false] .mark > span.orb-core {background:#a899d0}
+#badge.capsule-v2[data-page=result][data-verified=true] .mark > span.orb-core {background:#79c6b0}
+#badge.capsule-v2[data-page=pausing] .row #pause-button {display:none!important}
+@media(prefers-reduced-motion:reduce){#badge.capsule-v2,#badge.capsule-v2 * {animation:none!important;transition:none!important}}
+
+/* The drawing inspector shares the capsule palette in both appearances.
+   Legacy inspector colors were dark-only, including native select menus. */
+#badge.capsule-v2 #drawing-tools {background:var(--well);color:var(--ink);border-color:var(--line)}
+#badge.capsule-v2 #drawing-tools > summary {color:var(--ink)}
+#badge.capsule-v2 #drawing-tools > summary::after {color:var(--muted)}
+#badge.capsule-v2 #drawing-tools :is(label,.drawing-advanced > summary),
+#badge.capsule-v2 #drawing-edit-status {color:var(--muted)}
+#badge.capsule-v2 #drawing-tools :is(select,input) {background:var(--well);color:var(--ink);border-color:var(--muted);color-scheme:inherit}
+#badge.capsule-v2 #drawing-tools input::placeholder {color:var(--muted);opacity:1}
+#badge.capsule-v2 #drawing-tools .drawing-inspector,
+#badge.capsule-v2 #drawing-tools .drawing-advanced {border-color:var(--line)}
+#badge.capsule-v2 #drawing-tools .drawing-inspector {scrollbar-color:var(--muted) transparent}
+#badge.capsule-v2 #drawing-tools button:not(#drawing-edit) {background:var(--well);color:var(--ink)}
+#badge.capsule-v2 #drawing-tools button:not(:disabled):hover,
+#badge.capsule-v2 #drawing-objects button[aria-pressed=true] {background:var(--primary-bg);color:#2b203f;border-color:var(--input-focus)}
+#badge.capsule-v2 #drawing-tools :is(select,input,button,summary):focus-visible {outline-color:var(--ink)}
+
+/* Explain-to-action is a decision, with the original request and next step. */
+#badge.capsule-v2 #capsule-action-request {margin:8px 0 14px;padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:var(--well)}
+#badge.capsule-v2 #capsule-request-label {margin:0 0 7px;color:var(--muted);font-size:11px;line-height:1.4;font-weight:600;letter-spacing:.04em;text-transform:uppercase}
+#badge.capsule-v2 #capsule-request-text {margin:0;color:var(--ink);font-size:14px;line-height:1.6;white-space:pre-wrap;overflow-wrap:anywhere}
+#badge.capsule-v2 #capsule-action-next {margin:0;color:var(--muted);font-size:13px;line-height:1.5}
+#badge.capsule-v2[data-page=mode-switch] #capsule-body {padding-bottom:16px}
+#badge.capsule-v2[data-page=mode-switch] #context-actions {display:flex;flex-wrap:wrap;gap:10px;width:100%;margin:0;padding:0}
+#badge.capsule-v2[data-page=mode-switch] #context-actions button {flex:1 1 130px;min-height:42px;padding:10px 14px;border-radius:11px;white-space:normal}
+#badge.capsule-v2[data-page=mode-switch] #context-actions button[data-action-kind=switch_mode] {background:var(--primary-bg);color:#2b203f;border-color:transparent;font-weight:600}
+#badge.capsule-v2[data-page=mode-switch] #context-actions button[data-action-kind=stay_explain] {background:transparent;color:var(--ink);border-color:var(--line)}
+
+/* Perceived speed (docs/perceived-speed-2026-09-23/PLAN.md). Progress rows
+   are controller facts; motion only marks real state: one slow edge breath
+   while Carve waits on the model (it stops the instant input starts), a
+   shimmer on the row in progress, a tick when a row completes, and a
+   distinct amber waiting-on-you state. Reduced motion keeps every state and
+   drops the motion (rule above). */
+#badge.capsule-v2 #capsule-checklist {list-style:none;margin:2px 0 0;padding:0;display:grid;gap:10px}
+#badge.capsule-v2 #capsule-checklist li {display:grid;grid-template-columns:16px minmax(0,1fr);gap:10px;align-items:start;font-size:14px;line-height:1.45;color:var(--muted)}
+#badge.capsule-v2 #capsule-checklist li[data-state=now] {color:var(--ink)}
+#badge.capsule-v2 #capsule-checklist li[data-state=done] {color:var(--ink-soft)}
+#badge.capsule-v2 #capsule-checklist .check-mark {position:relative;width:14px;height:14px;margin-top:3px;border-radius:50%;border:1.5px solid var(--line);box-sizing:border-box}
+#badge.capsule-v2 #capsule-checklist li[data-state=now] .check-mark {border-color:#c5b3ef;animation:check-now 1.6s ease-in-out infinite}
+#badge.capsule-v2 #capsule-checklist li[data-state=done] .check-mark {background:#79c6b0;border-color:#79c6b0}
+#badge.capsule-v2 #capsule-checklist li[data-state=done] .check-mark::after {content:'';position:absolute;left:3.5px;top:1px;width:3px;height:6.5px;border:solid #1d2a25;border-width:0 1.6px 1.6px 0;transform:rotate(45deg)}
+#badge.capsule-v2 #capsule-checklist li.ticked .check-mark {animation:check-tick 360ms cubic-bezier(.2,.8,.2,1)}
+#badge.capsule-v2 #capsule-checklist .check-text {display:grid;min-width:0}
+#badge.capsule-v2 #capsule-checklist .check-label {overflow-wrap:anywhere}
+#badge.capsule-v2 #capsule-checklist .check-detail {font-size:12px;line-height:1.5;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+body:not([data-phase=acting]) #badge.capsule-v2 #capsule-checklist li[data-state=now] .check-label {background:linear-gradient(90deg,var(--ink) 0%,var(--ink) 38%,#b9a2ea 50%,var(--ink) 62%,var(--ink) 100%);background-size:260% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:check-shimmer 2.4s linear infinite}
+@keyframes check-tick {0%{transform:scale(.4)}60%{transform:scale(1.18)}100%{transform:scale(1)}}
+@keyframes check-now {0%,100%{box-shadow:0 0 0 0 rgb(197 179 239 / 0%)}50%{box-shadow:0 0 0 4px rgb(197 179 239 / 24%)}}
+@keyframes check-shimmer {from{background-position:100% 0}to{background-position:-160% 0}}
+
+body:is([data-phase=preparing],[data-phase=observing],[data-phase=deciding],[data-phase=verifying]):not([data-theme=paused]):not([data-theme=attention]):not([data-theme=complete]):not([data-tier=dot]) #badge.capsule-v2[data-page=working] {animation:capsule-think 2.4s ease-in-out infinite}
+@keyframes capsule-think {0%,100%{box-shadow:0 12px 30px #17112138,inset 0 0 0 1px rgb(197 179 239 / 0%)}50%{box-shadow:0 12px 30px #17112138,inset 0 0 0 1.5px rgb(197 179 239 / 60%)}}
+
+body[data-theme=attention]:not([data-tier=dot]) #badge.capsule-v2 {border-color:rgb(240 190 106 / 72%)}
+body[data-theme=attention] #badge.capsule-v2 .orb-core {background:#e8be77}
+#badge.capsule-v2 #capsule-waiting {flex:none;font-size:12px;color:#e8be77;font-variant-numeric:tabular-nums}
+body[data-tier=line] #badge.capsule-v2 #capsule-waiting {display:none}
+#badge.capsule-v2[data-waiting-long=true] {animation:capsule-nudge 1.4s ease-in-out 2}
+@keyframes capsule-nudge {0%,100%{box-shadow:0 12px 30px #17112138,inset 0 0 0 1px rgb(240 190 106 / 0%)}50%{box-shadow:0 12px 30px #17112138,inset 0 0 0 2px rgb(240 190 106 / 70%)}}
+
+#badge.capsule-v2[data-page=result] #capsule-title {animation:result-arrive 420ms cubic-bezier(.2,.8,.2,1)}
+#badge.capsule-v2[data-page=result][data-verified=true] .answer-evidence {animation:result-arrive 420ms 160ms cubic-bezier(.2,.8,.2,1) both}
+@keyframes result-arrive {from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media(prefers-color-scheme:light){#badge.capsule-v2 #capsule-waiting{color:#8a5a12}#badge.capsule-v2 #capsule-checklist li[data-state=done] .check-mark{background:#4fa98f;border-color:#4fa98f}#badge.capsule-v2 #capsule-checklist li[data-state=done] .check-mark::after{border-color:#fff}body:not([data-phase=acting]) #badge.capsule-v2 #capsule-checklist li[data-state=now] .check-label{background-image:linear-gradient(90deg,var(--ink) 0%,var(--ink) 38%,#8a6cc4 50%,var(--ink) 62%,var(--ink) 100%)}}
+/* The model's declared next step reads as pending while the turn is still
+   being decided; it settles to plain text once input starts. */
+body:is([data-phase=deciding],[data-phase=observing]) #badge.capsule-v2[data-intent=true] #capsule-title,
+body:is([data-phase=deciding],[data-phase=observing]) #badge.capsule-v2[data-intent=true] #label {background:linear-gradient(90deg,var(--ink) 0%,var(--ink) 38%,#b9a2ea 50%,var(--ink) 62%,var(--ink) 100%);background-size:260% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:check-shimmer 2.4s linear infinite}
+
+/* Continue is the one way back while Carve waits for the person: the accent ink marks it as the next step. */
+#badge.capsule-v2 #turn-continue {color:var(--link-ink, var(--ink));font-weight:600}
+#badge.capsule-v2 #turn-continue[hidden] {display:none!important}
+
+/* Signature experience: one stationary header and controls, with a paper-like
+   body that changes from introduction to work to evidence-backed review. */
+#badge.capsule-v2 #capsule-body {position:relative}
+#badge.capsule-v2 #capsule-chapter {display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 10px;margin:0 0 17px}
+#badge.capsule-v2 #capsule-chapter-label {font-size:10px;letter-spacing:.12em;line-height:1.5;color:#c8b4e1;font-weight:600}
+#badge.capsule-v2 #capsule-chapter-detail {font-size:11px;line-height:1.5;color:var(--muted)}
+#badge.capsule-v2[data-page=compose] #capsule-title {font-size:25px;letter-spacing:-.04em;line-height:1.25;font-weight:550}
+#badge.capsule-v2[data-page=result] #answer {font-size:15px;line-height:1.7}
+#badge.capsule-v2[data-page=result] .answer-evidence {padding-top:14px;margin-top:17px;border-top:1px solid var(--line);font-size:12px;line-height:1.6}
+#badge.capsule-v2 #capsule-original-request {margin-top:15px;padding:12px 14px;background:var(--well);border:1px solid var(--line);border-radius:10px}
+#badge.capsule-v2 #capsule-original-request summary {font-size:12px;color:var(--ink-soft);cursor:pointer;line-height:1.6}
+#badge.capsule-v2 #capsule-original-request summary:focus-visible {outline:2px solid var(--input-focus);outline-offset:4px}
+#badge.capsule-v2 #capsule-original-text {font-size:13px;line-height:1.7;color:var(--muted);margin:10px 0 0;white-space:pre-wrap;overflow-wrap:anywhere}
+body[data-tier=line] #badge.capsule-v2 {border-radius:24px}
+body[data-tier=line] #badge.capsule-v2 .row {padding:12px 15px}
+@media(prefers-color-scheme:light) {
+  body #badge.capsule-v2 {background:#fcfbf7;--well:#f3eff7;--line:#e2dae8;--input-focus:#9272a6;--primary-bg:#e5d8f1;--ink:#372d40;--ink-soft:#55475f;--muted:#76677f;border-color:#dacfe3;box-shadow:0 12px 32px #45314f1c}
+  #badge.capsule-v2 #capsule-chapter-label {color:#81618f}
+  #badge.capsule-v2 #capsule-title {color:#372d40}
+  #badge.capsule-v2 #capsule-original-request {background:#f6f2f8}
+  #badge.capsule-v2[data-page=result][data-verified=true] .answer-evidence {color:#356c54}
+}
+@media(max-height:520px) {
+  #badge.capsule-v2 #capsule-chapter {margin-bottom:10px}
+  #badge.capsule-v2 #capsule-chapter-detail {display:none}
+}
+
+/* A dedicated grip and the title strip move only the copilot, never the task. */
+#badge.capsule-v2 .row {cursor:grab;touch-action:none;user-select:none}
+#badge.capsule-v2 #capsule-drag {flex:none;padding:0;min-width:20px;width:20px;height:28px;border:0;background:none;color:var(--muted);font-size:22px;line-height:1;opacity:.55;cursor:grab;touch-action:none}
+#badge.capsule-v2 .row:hover #capsule-drag,#badge.capsule-v2 #capsule-drag:focus-visible {opacity:1}
+#badge.capsule-v2[data-dragging=true] .row,#badge.capsule-v2[data-dragging=true] #capsule-drag {cursor:grabbing}
+#badge.capsule-v2 #capsule-drag:disabled {cursor:default;opacity:.3}

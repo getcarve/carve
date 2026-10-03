@@ -1,0 +1,25 @@
+:root {
+  --canvas: #f8f7fc;
+  --surface: #fff;
+  --surface-soft: #f5f3fa;
+  --surface-strong: #eeebf5;
+  --ink: #282338;
+  --ink-soft: #655e75;
+  --muted: #736b83;
+  --line: #e8e3f0;
+  --line-strong: #d9d2e5;
+  --accent: #7050b5;
+  --accent-hover: #593990;
+  --accent-soft: #f0eafa;
+  --focus: #805bc4;
+  --positive: #2d7a4c;
+  --warning: #a56d22;
+  --danger: #a33f36;
+  --amber: #efba6d;
+  --radius-lg: 20px;
+  --shadow-subtle: 0 2px 8px rgb(33 46 39 / 3%);
+  --shadow-medium: 0 10px 34px rgb(32 47 39 / 8%);
+  --font-sans: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+  --font-display: var(--font-sans);
+  --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+}

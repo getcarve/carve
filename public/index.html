@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Carve — A little less doing. A little more living.">
+    <title>Carve · A little less doing. A little more living.</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand-lockup">
+          <div class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></div>
+          <div>
+            <p class="eyebrow">A little less doing. A little more living.</p>
+            <h1>Carve</h1>
+          </div>
+        </div>
+        <div id="system-status" class="system-status" aria-live="polite"></div>
+        <button id="global-stop" class="danger-button" type="button">■ Pause all</button>
+      </header>
+
+      <aside class="sidebar" aria-label="Primary navigation">
+        <div class="local-badge"><span class="pulse-dot"></span> Local control plane</div>
+        <nav id="nav"></nav>
+        <div class="sidebar-note">
+          <p class="eyebrow">Safety posture</p>
+          <strong>Evidence before action.</strong>
+          <span>Every change is proposed, policy-checked, verified, and written to the audit chain.</span>
+        </div>
+      </aside>
+
+      <main id="main" tabindex="-1"></main>
+    </div>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

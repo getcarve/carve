@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 576" width="1200" height="576" role="img" aria-label="How Carve works: you ask and approve; plain code on your Mac captures one window, compiles the model's proposals into effects, gates them, delivers input to that window only, verifies, and logs; the model only proposes and reviews.">
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7A6F9A"/></marker></defs>
+<rect width="1200" height="576" fill="#FFFFFF"/>
+<rect x="12" y="24" width="1176" height="118" rx="18" fill="#F6F2FC" stroke="#E6E1F2"/>
+<text x="34" y="48.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#5B3FA6" text-anchor="start" dominant-baseline="middle" letter-spacing="0.08em">YOU</text>
+<text x="34" y="66.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6B6680" text-anchor="start" dominant-baseline="middle">ask · approve · stop</text>
+<rect x="12" y="156" width="1176" height="250" rx="18" fill="#F3F0FA" stroke="#E6E1F2"/>
+<text x="34" y="180.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#5B3FA6" text-anchor="start" dominant-baseline="middle" letter-spacing="0.08em">PLAIN CODE, ON YOUR MAC</text>
+<text x="34" y="198.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6B6680" text-anchor="start" dominant-baseline="middle">decides what runs</text>
+<rect x="12" y="420" width="1176" height="136" rx="18" fill="#F7F7F9" stroke="#E6E1F2"/>
+<text x="34" y="444.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#5B3FA6" text-anchor="start" dominant-baseline="middle" letter-spacing="0.08em">THE MODEL</text>
+<text x="34" y="462.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#6B6680" text-anchor="start" dominant-baseline="middle">proposes · reviews · never acts</text>
+<rect x="150.0" y="56.0" width="180" height="60" rx="14" fill="#FFFFFF" stroke="#CFC6E6" stroke-width="1.5"/>
+<text x="240" y="75.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="650" fill="#282338" text-anchor="middle" dominant-baseline="middle">⌥D on a window</text>
+<text x="240" y="100.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6B6680" text-anchor="middle" dominant-baseline="middle">say what you want done</text>
+<rect x="505.0" y="56.0" width="230" height="60" rx="14" fill="#F4C66B" stroke="#F4C66B" stroke-width="1.5"/>
+<text x="620" y="75.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="650" fill="#6B4A00" text-anchor="middle" dominant-baseline="middle">Approval card</text>
+<text x="620" y="100.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6B4A00" text-anchor="middle" dominant-baseline="middle">exactly what will happen, where</text>
+<rect x="775.0" y="56.0" width="170" height="60" rx="14" fill="#FFFFFF" stroke="#CFC6E6" stroke-width="1.5" stroke-dasharray="6 5"/>
+<text x="860" y="75.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="650" fill="#282338" text-anchor="middle" dominant-baseline="middle">Esc · ⌘⇧.</text>
+<text x="860" y="100.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6B6680" text-anchor="middle" dominant-baseline="middle">stops it, from anywhere</text>
+<rect x="1066.0" y="56.0" width="120" height="60" rx="14" fill="#FFFFFF" stroke="#CFC6E6" stroke-width="1.5"/>
+<text x="1126" y="75.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="650" fill="#282338" text-anchor="middle" dominant-baseline="middle">Receipt</text>
+<text x="1126" y="100.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6B6680" text-anchor="middle" dominant-baseline="middle">in order, checked</text>
+<rect x="160.0" y="217.0" width="160" height="90" rx="14" fill="#FFFFFF" stroke="#CFC6E6" stroke-width="1.5"/>
+<text x="240" y="251.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="650" fill="#282338" text-anchor="middle" dominant-baseline="middle">Capture</text>
+<text x="240" y="268.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6B6680" text-anchor="middle" dominant-baseline="middle">screenshot + accessibility</text>
+<text x="240" y="283.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6B6680" text-anchor="middle" dominant-baseline="middle">tree of one window</text>
+<rect x="340.0" y="217.0" width="160" height="90" rx="14" fill="#FFFFFF" stroke="#CFC6E6" stroke-width="1.5"/>
+<text x="420" y="251.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="650" fill="#282338" text-anchor="middle" dominant-baseline="middle">Compile to effects</text>
+<text x="420" y="268.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6B6680" text-anchor="middle" dominant-baseline="middle">each action matched</text>
+<text x="420" y="283.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6B6680" text-anchor="middle" dominant-baseline="middle">to a real control</text>
+<rect x="520.0" y="217.0" width="200" height="90" rx="14" fill="#8B61CF" stroke="#8B61CF" stroke-width="1.5"/>
+<text x="620" y="251.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="650" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle">Gate</text>
+<text x="620" y="268.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#F3EEFF" text-anchor="middle" dominant-baseline="middle">consequential or unknown → ask</text>
+<text x="620" y="283.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#F3EEFF" text-anchor="middle" dominant-baseline="middle">known and in scope → pass</text>
+<rect x="740.0" y="217.0" width="150" height="90" rx="14" fill="#A6EAD2" stroke="#A6EAD2" stroke-width="1.5"/>
+<text x="815" y="251.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="650" fill="#1F5C47" text-anchor="middle" dominant-baseline="middle">Deliver input</text>
+<text x="815" y="268.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#1F5C47" text-anchor="middle" dominant-baseline="middle">that window only; a click</text>
+<text x="815" y="283.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#1F5C47" text-anchor="middle" dominant-baseline="middle">outside is not sent</text>
+<rect x="910.0" y="217.0" width="136" height="90" rx="14" fill="#FFFFFF" stroke="#CFC6E6" stroke-width="1.5"/>
+<text x="978" y="251.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="650" fill="#282338" text-anchor="middle" dominant-baseline="middle">Read back</text>
+<text x="978" y="268.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6B6680" text-anchor="middle" dominant-baseline="middle">settle, re-capture,</text>
+<text x="978" y="283.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6B6680" text-anchor="middle" dominant-baseline="middle">check the result</text>
+<rect x="1066.0" y="217.0" width="120" height="90" rx="14" fill="#282338" stroke="#282338" stroke-width="1.5"/>
+<text x="1126" y="251.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="650" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle">Audit log</text>
+<text x="1126" y="268.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle">hash-chained,</text>
+<text x="1126" y="283.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle">stays on the Mac</text>
+<path d="M320,262 L340,262" fill="none" stroke="#7A6F9A" stroke-width="1.8" marker-end="url(#arr)"/>
+<path d="M500,262 L520,262" fill="none" stroke="#7A6F9A" stroke-width="1.8" marker-end="url(#arr)"/>
+<path d="M720,262 L740,262" fill="none" stroke="#7A6F9A" stroke-width="1.8" marker-end="url(#arr)"/>
+<path d="M890,262 L910,262" fill="none" stroke="#7A6F9A" stroke-width="1.8" marker-end="url(#arr)"/>
+<path d="M1046,262 L1066,262" fill="none" stroke="#7A6F9A" stroke-width="1.8" marker-end="url(#arr)"/>
+<text x="600" y="388.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="500" fill="#6B6680" text-anchor="middle" dominant-baseline="middle">Every box in this lane is ordinary code. The model does not run any of it.</text>
+<rect x="280.0" y="457.0" width="300" height="74" rx="14" fill="#FFFFFF" stroke="#CFC6E6" stroke-width="1.5"/>
+<text x="430" y="483.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="650" fill="#282338" text-anchor="middle" dominant-baseline="middle">Proposes the next actions</text>
+<text x="430" y="500.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6B6680" text-anchor="middle" dominant-baseline="middle">sees a downscaled frame and the tree;</text>
+<text x="430" y="515.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6B6680" text-anchor="middle" dominant-baseline="middle">any provider, your key</text>
+<rect x="903.0" y="457.0" width="150" height="74" rx="14" fill="#FFFFFF" stroke="#CFC6E6" stroke-width="1.5"/>
+<text x="978" y="483.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="650" fill="#282338" text-anchor="middle" dominant-baseline="middle">Second model</text>
+<text x="978" y="500.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6B6680" text-anchor="middle" dominant-baseline="middle">reviews scope and</text>
+<text x="978" y="515.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#6B6680" text-anchor="middle" dominant-baseline="middle">the final answer</text>
+<text x="741" y="477.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="500" fill="#6B6680" text-anchor="middle" dominant-baseline="middle">It can suggest anything.</text>
+<text x="741" y="494.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="500" fill="#6B6680" text-anchor="middle" dominant-baseline="middle">It cannot click, and it cannot waive the gate.</text>
+<path d="M240,116 L240,216" fill="none" stroke="#7A6F9A" stroke-width="1.8" marker-end="url(#arr)"/>
+<text x="252" y="166.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="12" font-weight="500" fill="#6B6680" text-anchor="start" dominant-baseline="middle">your request</text>
+<path d="M262,307 C262,420 300,457 330,457" fill="none" stroke="#7A6F9A" stroke-width="1.8" marker-end="url(#arr)"/>
+<text x="276" y="420.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="12" font-weight="500" fill="#6B6680" text-anchor="start" dominant-baseline="middle">frame + tree</text>
+<path d="M430,457 L430,307" fill="none" stroke="#7A6F9A" stroke-width="1.8" marker-end="url(#arr)"/>
+<text x="442" y="420.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="12" font-weight="500" fill="#6B6680" text-anchor="start" dominant-baseline="middle">proposed actions</text>
+<path d="M620,217 L620,116" fill="none" stroke="#7A6F9A" stroke-width="1.8" marker-end="url(#arr)"/>
+<text x="632" y="159.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="12" font-weight="500" fill="#6B6680" text-anchor="start" dominant-baseline="middle">consequential</text>
+<text x="632" y="173.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="12" font-weight="500" fill="#6B6680" text-anchor="start" dominant-baseline="middle">or unknown</text>
+<path d="M706,116 C726,170 765,205 815,217" fill="none" stroke="#8B61CF" stroke-width="1.8" marker-end="url(#arr)"/>
+<text x="826" y="161.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="12" font-weight="500" fill="#6B6680" text-anchor="start" dominant-baseline="middle">approved → the frame is</text>
+<text x="826" y="175.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="12" font-weight="500" fill="#6B6680" text-anchor="start" dominant-baseline="middle">re-checked, then the click</text>
+<path d="M978,307 L978,457" fill="none" stroke="#7A6F9A" stroke-width="1.8" marker-end="url(#arr)"/>
+<text x="990" y="382.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="12" font-weight="500" fill="#6B6680" text-anchor="start" dominant-baseline="middle">what changed</text>
+<path d="M903,522 C850,522 690,522 580,522" fill="none" stroke="#7A6F9A" stroke-width="1.8" marker-end="url(#arr)" stroke-dasharray="5 5"/>
+<text x="741" y="540.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif" font-size="12" font-weight="500" fill="#6B6680" text-anchor="middle" dominant-baseline="middle">next turn</text>
+<path d="M1126,217 L1126,116" fill="none" stroke="#7A6F9A" stroke-width="1.8" marker-end="url(#arr)"/>
+</svg>

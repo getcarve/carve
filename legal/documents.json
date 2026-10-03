@@ -1,0 +1,295 @@
+{
+  "version": "2026-09-14",
+  "date": "September 14, 2026",
+  "documents": [
+    {
+      "id": "terms",
+      "title": "Terms of Use",
+      "eyebrow": "Our agreement",
+      "description": "Clear expectations for working with Carve.",
+      "summary": "Carve uses AI and can act in your apps. Review important work, choose your permissions carefully, and understand the dispute terms before agreeing.",
+      "sections": [
+        {
+          "id": "agreement",
+          "title": "1. Who we are; your agreement",
+          "paragraphs": [
+            "These Terms govern the Carve desktop application, Carve Cloud, and related services (the Service), provided by {{COMPANY_LEGAL_NAME}}, a Delaware corporation (Carvify, we, us). They take effect when you expressly accept this version. If you act for an organization, you represent that you have authority to bind it; \u201cyou\u201d includes that organization. A separately signed agreement controls where it conflicts with these Terms.",
+            "You must be at least 18 and legally able to enter a contract. Do not use the Service if you do not agree. Our Privacy Policy explains our information practices; acknowledging receipt of it is not consent to unrelated data uses.",
+            "IMPORTANT: Section 12 includes binding individual arbitration and a class-action waiver for U.S. users, with exceptions and a 30-day opt-out. It affects how you and Carvify resolve disputes."
+          ]
+        },
+        {
+          "id": "ai",
+          "title": "2. AI assistance and computer control",
+          "paragraphs": [
+            "Carve is an AI system, not a human operator. Its answers, plans, code, pointers, and statements of completion can be inaccurate, incomplete, biased, or fabricated. An AI check, confidence signal, or receipt is not a guarantee that a task succeeded. Independently verify important facts and outcomes. Outputs are not medical, legal, financial, or other professional advice. Carve is not an emergency service.",
+            "When you authorize computer control, Carve may read screen content and controls, move the pointer, click, type, use the clipboard, navigate apps, and change files or records using your signed-in sessions. Actions can send messages, disclose information, incur charges, or change or delete data. Mistakes may be difficult or impossible to reverse. Permissions, approvals, redaction, and stop controls reduce risk but cannot eliminate it or undo completed actions.",
+            "Use only systems and information you are authorized to access. Review the target windows, task scope, proposed actions, and supervision level before starting. Remain available to supervise, protect sensitive content, keep appropriate backups, and verify results. Do not rely on Carve for safety-critical systems, emergency response, or decisions requiring a qualified professional. Do not use it to make consequential decisions about another person\u2019s employment, credit, housing, insurance, education, or legal rights without appropriate human review and lawful safeguards.",
+            "Your authorization is limited to the task and permissions you choose. These Terms do not grant blanket permission to make purchases, send communications, or take unrelated actions."
+          ]
+        },
+        {
+          "id": "license",
+          "title": "3. License and acceptable use",
+          "paragraphs": [
+            "Subject to these Terms, we grant you a limited, nonexclusive, nontransferable license to use Carve for lawful personal or internal business purposes on devices you own or are authorized to control. We retain rights in the Service. Third-party and open-source components remain subject to their applicable licenses.",
+            "Do not infringe privacy or intellectual-property rights; impersonate or defraud people; distribute malware; bypass security, approvals, quotas, or access restrictions; use stolen credentials; or interfere with the Service. Do not reverse engineer except as allowed by mandatory law. You are responsible for complying with the rules of apps and services you automate and for any required notice or consent when recording or processing other people\u2019s information."
+          ]
+        },
+        {
+          "id": "accounts",
+          "title": "4. Accounts and third-party services",
+          "paragraphs": [
+            "Provide accurate account information, protect sign-in codes and credentials, and promptly report suspected unauthorized access. Your organization may impose additional rules on the devices, accounts, and information you use.",
+            "AI providers, operating systems, websites, and other services have their own terms, availability, prices, and data practices. If you configure your own provider, you are responsible for that account and its charges. We do not control third-party services or guarantee their continued compatibility. This does not exclude duties we have for service providers under applicable law."
+          ]
+        },
+        {
+          "id": "content",
+          "title": "5. Your content and AI output",
+          "paragraphs": [
+            "As between you and Carvify, you retain your rights in the information you submit. To the extent we have assignable rights in output generated for you, we assign those rights to you, subject to third-party rights and applicable law. AI output may not qualify for intellectual-property protection, may resemble other users\u2019 output, or may contain third-party material; we do not promise ownership, uniqueness, or noninfringement.",
+            "You grant us a limited license to process your content as needed to provide, secure, and support the Service and comply with law, consistent with our Privacy Policy. This is not a general license to publish your private content or train a general-purpose model on it. You must have the rights and permissions needed to submit content and use output. Feedback may be used to improve the Service without compensation, but does not transfer ownership of your private task content."
+          ]
+        },
+        {
+          "id": "billing",
+          "title": "6. Payment, renewals, and cancellation",
+          "paragraphs": [
+            "The checkout screen identifies the plan, price, billing interval, applicable taxes, usage allowances, and any trial or prepaid-credit conditions before you purchase. A subscription renews at the disclosed interval until canceled. By separately authorizing a subscription at checkout, you authorize recurring charges. Accepting these Terms alone does not authorize a charge.",
+            "Cancel through Manage billing in the app before the next renewal to avoid the next charge. Cancellation normally takes effect at the end of the paid period; uninstalling the app or signing out does not cancel a subscription. If the portal is unavailable, contact Support. We provide legally required renewal reminders and notices of price changes and obtain additional consent when required.",
+            "Additional task packs require a separate purchase. Any expiry must be disclosed before purchase and is subject to applicable law. Refunds and cancellation rights are described in our Refund Policy and at checkout; mandatory consumer rights prevail. If payment fails, we may restrict paid features. Third-party provider fees are separate. We will not automatically charge for usage beyond the allowance you purchased."
+          ]
+        },
+        {
+          "id": "service",
+          "title": "7. Changes, suspension, and termination",
+          "paragraphs": [
+            "You may stop using the Service at any time. You may request account deletion; local app data is managed separately. We may suspend or terminate access for a material breach, legal requirements, security risks, or abuse. Where reasonably practicable, we will explain and provide an opportunity to resolve the issue, unless doing so would create risk or violate law.",
+            "We may change models and features or discontinue the Service. For a material reduction in prepaid services or discontinuation unrelated to your breach, we will provide notice where practicable and an appropriate prorated refund for unused prepaid subscription time. Sections intended to continue, including ownership, payment obligations already incurred, disclaimers, liability, and dispute terms, survive termination."
+          ]
+        },
+        {
+          "id": "warranties",
+          "title": "8. Warranty disclaimer",
+          "paragraphs": [
+            "TO THE FULLEST EXTENT PERMITTED BY LAW, THE SERVICE IS PROVIDED \u201cAS IS\u201d AND \u201cAS AVAILABLE.\u201d WE DISCLAIM IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NONINFRINGEMENT. WE DO NOT WARRANT ACCURACY, UNINTERRUPTED AVAILABILITY, SECURITY AGAINST EVERY THREAT, OR ERROR-FREE COMPUTER ACTIONS.",
+            "This disclaimer does not remove mandatory consumer guarantees, statutory remedies, or express commitments in a separately signed agreement."
+          ]
+        },
+        {
+          "id": "liability",
+          "title": "9. Limits on liability",
+          "paragraphs": [
+            "TO THE FULLEST EXTENT PERMITTED BY LAW, CARVIFY AND ITS AFFILIATES, OFFICERS, EMPLOYEES, AND SUPPLIERS WILL NOT BE LIABLE FOR INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES, OR LOSS OF PROFITS, REVENUE, BUSINESS OPPORTUNITY, GOODWILL, OR DATA ARISING FROM THE SERVICE OR THESE TERMS, EVEN IF ADVISED OF THE POSSIBILITY.",
+            "TO THE FULLEST EXTENT PERMITTED BY LAW, OUR AGGREGATE LIABILITY ARISING OUT OF OR RELATING TO THE SERVICE OR THESE TERMS WILL NOT EXCEED THE GREATER OF US $100 OR THE AMOUNTS YOU PAID CARVIFY FOR THE SERVICE IN THE 12 MONTHS BEFORE THE EVENT FIRST GIVING RISE TO LIABILITY.",
+            "These exclusions and limits do not apply to fraud, willful misconduct, gross negligence, death or personal injury caused by negligence where liability cannot be limited, or any other liability or remedy that applicable law prohibits excluding or limiting. They do not waive nonwaivable privacy rights, consumer guarantees, or public injunctive relief. The limits allocate risk and form part of the basis of our agreement; they are not a promise that no loss can occur."
+          ]
+        },
+        {
+          "id": "business",
+          "title": "10. Business-user indemnity",
+          "paragraphs": [
+            "If you use the Service on behalf of a business, that business will defend and indemnify Carvify against third-party claims and reasonable costs arising from its unlawful content, unauthorized use of others\u2019 systems, or material breach of these Terms, to the extent caused by that conduct. This does not apply to personal consumer use or to the extent a claim results from Carvify\u2019s breach, negligence, or misconduct. We will promptly notify you, permit reasonable control of the defense, and reasonably cooperate at your expense. No settlement may admit fault or impose obligations on us without our written consent, not unreasonably withheld."
+          ]
+        },
+        {
+          "id": "law",
+          "title": "11. Governing law and courts",
+          "paragraphs": [
+            "California law governs these Terms without regard to conflict-of-law rules, except that the Federal Arbitration Act governs the arbitration agreement. Carvify\u2019s incorporation in Delaware does not change this choice. Mandatory protections under the law of your place of residence remain available.",
+            "For disputes not subject to arbitration, the parties consent to state and federal courts in San Francisco County, California, except for eligible small-claims cases and where applicable law permits a consumer to bring proceedings in their home jurisdiction."
+          ]
+        },
+        {
+          "id": "arbitration",
+          "title": "12. U.S. arbitration and dispute resolution",
+          "paragraphs": [
+            "Scope. If you reside in the United States, you and Carvify agree to resolve disputes arising out of these Terms or the Service by binding individual arbitration, except as stated here. Arbitration replaces a trial before a judge or jury and generally has limited court review. Non-U.S. consumers are not required by these Terms to arbitrate.",
+            "Informal resolution. Before filing, either party may send a notice describing the dispute and requested relief. Send yours to the Support email on our legal website with the subject \u201cLegal dispute\u201d; we will use your account contact. We will try in good faith to resolve the dispute for 30 days. This process does not prevent an urgent application, small-claims filing, or action necessary to preserve a deadline. Applicable limitation periods are tolled during an agreed informal-resolution period.",
+            "Procedure and costs. JAMS will administer arbitration under its applicable Streamlined Arbitration Rules and Consumer Minimum Standards (jamsadr.com/consumer-minimum-standards and jamsadr.com/rules-streamlined-arbitration). A single neutral arbitrator will issue a written decision and may award the individual relief available in court. Consumer proceedings may be remote or in a reasonably convenient location consistent with JAMS standards. Your filing fee will not exceed $250 or the amount required by applicable law or JAMS standards, whichever is less; Carvify pays the remaining JAMS and arbitrator fees required by those standards. Statutory rights to recover attorneys\u2019 fees remain available. If JAMS cannot administer a compliant proceeding, either party may pursue the dispute in a competent court unless both agree on another administrator.",
+            "Exceptions. Either party may bring an eligible individual case in small-claims court. Either may seek temporary court relief to preserve rights pending arbitration. You may report concerns to government agencies. Claims and remedies that cannot lawfully be arbitrated, including any nonwaivable claim for public injunctive relief, may proceed in court. A court, not an arbitrator, decides whether this arbitration agreement was formed and the enforceability or scope of the class-action waiver.",
+            "Individual proceedings. To the extent permitted by law, you and Carvify waive a jury trial and agree to bring arbitrable claims individually, not as a class, collective, or representative proceeding. There is no class arbitration without both parties\u2019 express written agreement after a dispute arises. This does not prohibit coordinated individual filings, legal representation, or nonwaivable remedies. If a restriction is unenforceable as to a claim or remedy, that claim or remedy proceeds in court; the remaining valid provisions continue to apply.",
+            "30-day opt-out. You may opt out without affecting your access to Carve by emailing the Support address on our legal website within 30 days of first accepting these Terms. Use \u201cArbitration opt-out\u201d as the subject and include your name, account email (if any), and a clear statement that you opt out. No explanation or account is required. Keep a copy. If you opt out, neither party is bound by this section\u2019s arbitration or associated class-action waiver. A timely prior opt-out remains effective.",
+            "Changes. Material changes to this arbitration section require fresh express agreement and apply prospectively. They do not apply to a dispute of which either party already gave notice. Silence or continued use alone is not acceptance of a changed arbitration agreement."
+          ]
+        },
+        {
+          "id": "general",
+          "title": "13. Notices and general terms",
+          "paragraphs": [
+            "We will identify revisions with a version and date and provide reasonable advance notice of material changes. Where agreement is required, we will request it; we will not treat a silently edited webpage as retroactive consent. Privacy changes remain subject to applicable notice and consent requirements.",
+            "These Terms, applicable purchase disclosures, and any separately signed agreement form the agreement about the Service. If a provision is unenforceable, the remainder continues as permitted by law, subject to section 12. Failure to enforce a right is not a waiver. You may not assign these Terms without our consent except as permitted by law. We may assign them in a merger, acquisition, or transfer of the Service, without reducing your mandatory rights.",
+            "Contact {{COMPANY_LEGAL_NAME}} using the Support contact on the Carve legal website for legal notices, account assistance, accessibility requests, and arbitration opt-outs. Electronic notices do not limit any legally required method of service."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "privacy",
+      "title": "Privacy Policy",
+      "eyebrow": "Your information",
+      "description": "Know what stays here. Know what is shared.",
+      "summary": "Carve stores working history on your Mac. Hosted AI features send task context to the provider you select, sometimes through Carve Cloud. Cloud account and usage records are separate from local history.",
+      "sections": [
+        {
+          "id": "scope",
+          "title": "1. Who this policy covers",
+          "paragraphs": [
+            "{{COMPANY_LEGAL_NAME}}, a Delaware corporation, operates Carve and Carve Cloud. This policy explains information we process through the app, cloud service, website, and support. It does not govern an independent app you automate or an AI provider you contract with directly. An organization\u2019s separate agreement may govern content we process on its behalf."
+          ]
+        },
+        {
+          "id": "collection",
+          "title": "2. Notice at collection: information and purposes",
+          "paragraphs": [
+            "Identifiers and account data: email address, account and device identifiers, platform, app version, authentication records, and subscription status. Sources are you, your device, authentication activity, and our payment provider. We use these to sign you in, connect devices, provide entitlements, prevent abuse, and send service notices. A device identifier may later be linked to an account; it is not necessarily anonymous.",
+            "Task and screen content: prompts, goals, attachments, selected window images, recognized text, accessibility controls, app or window names, URLs, relevant task history, derived memory, and model responses, depending on the feature and settings. Sources are you, apps you authorize, captured observations, and AI processing. We use this information to answer questions, plan and perform work, retrieve relevant context, and show results. It can include personal or sensitive information about you or other people, such as messages, financial information, health information, or credentials visible on screen.",
+            "Commercial and usage data: plan, transaction and subscription identifiers, task identifiers and status, request timestamps, models, token counts, estimated cost, latency, and provider request identifiers. We use these for billing, allowances, reliability, fraud prevention, and cost control. Stripe collects payment and billing details directly; Carve does not receive full card numbers through its checkout integration.",
+            "Website, security, and support data: network information such as IP addresses processed by servers, request and security information, correspondence, and diagnostic material you choose to send. We use these to deliver pages, protect the Service, investigate problems, and respond to requests. Avoid sending passwords or unrelated sensitive information to Support. Retention criteria appear in section 6."
+          ]
+        },
+        {
+          "id": "local",
+          "title": "3. Local storage and device permissions",
+          "paragraphs": [
+            "Carve maintains local working data, which can include captured observations, procedures, memory, conversations, approvals, receipts, settings, and audit records. Local storage does not mean the same information can never be sent to AI: relevant context may be included when you use a hosted feature.",
+            "Screen Recording permits capture of screen content. Accessibility permits reading supported controls and performing inputs such as clicks and typing. Task execution may use the clipboard and your signed-in apps. The scope and available controls depend on the mode. Review the selected windows and stop work before opening sensitive content. Redaction and exclusion controls are imperfect.",
+            "Manage capture and retention in Settings, use the app\u2019s local export or delete controls, and revoke operating-system permissions in macOS System Settings. Uninstalling the application does not necessarily remove its data directory, exported files, operating-system backups, cloud account, or subscription. Local deletion and cloud-account deletion are separate."
+          ]
+        },
+        {
+          "id": "ai-processing",
+          "title": "4. Hosted AI, local models, and training",
+          "paragraphs": [
+            "With Carve Cloud, a request passes through our relay to an AI provider. It may contain screen images, controls, instructions, prompts, and relevant task or memory context. The relay implementation processes request and response content in memory and records usage metadata rather than storing the payload as task history. This is not a promise of zero retention by every infrastructure or model provider.",
+            "With your own hosted provider, AI requests go from your Mac to the configured provider rather than through our model relay; account, billing, or entitlement requests may still reach Carve Cloud. With a local model, inference for that feature occurs locally, although other enabled features may use network services.",
+            "Carvify does not use relayed task content to train a general-purpose AI model. AI providers process data under the applicable API agreement and account settings. Abuse monitoring, caching, or stateful task features may involve provider retention. A request that asks a provider not to store a response is not a guarantee that all logs or abuse-monitoring records are removed. Review the providers listed in Service Providers and your own provider agreement. Any materially different use of previously collected content will receive the notice and consent required by law."
+          ]
+        },
+        {
+          "id": "sharing",
+          "title": "5. When information is disclosed",
+          "paragraphs": [
+            "We disclose information to service providers as needed for AI inference, hosting, databases, transactional email, payments, and support. The Service Providers page identifies the integrations used by Carve Cloud and links to their information. Providers can have different legal roles; for example, a payment provider may independently process information for fraud prevention and legal obligations.",
+            "Actions you authorize can disclose information directly to the apps, recipients, or services involved in your task. Their privacy practices apply to what they receive. We may also disclose information to comply with lawful process, protect rights and security, investigate abuse, or in a merger, financing, acquisition, or similar transaction, subject to applicable safeguards.",
+            "Carve\u2019s current app and gateway do not sell personal information, share it for cross-context behavioral advertising, or use it for targeted advertising. We do not use sensitive personal information to infer personal characteristics for advertising. These statements do not describe independent websites you choose to automate.",
+            "Where enabled, Cloudflare provides browser verification and proxies website and API traffic. Browser verification processes technical browser and network signals. Proxied AI requests can include the task context described above. Our application does not log their bodies for fraud analysis."
+          ]
+        },
+        {
+          "id": "retention",
+          "title": "6. Retention and deletion",
+          "paragraphs": [
+            "Local information: retained according to the applicable feature, capture policy, and your deletion choices. A capture-retention setting does not necessarily expire all conversations, memory, receipts, exports, or audit records.",
+            "Relay payloads: not persisted as task content by the relay application; model and infrastructure providers may retain information under their applicable terms and settings.",
+            "Cloud account, device, and usage records: retained to operate your account, enforce allowances, resolve billing issues, and protect the Service. Account deletion disables access and initiates cancellation and cleanup. The cleanup process removes account links from usage records and replaces account contact information after required steps complete. Processing may be delayed by a failed external operation and retried. Deletion does not erase every security, transaction, or legally required record.",
+            "Authentication data: sign-in codes expire and sessions expire or are revoked under their configured lifetimes. Expiry is not the same as immediate deletion from every store or backup.",
+            "Billing, support, legal, and security records: retained as reasonably necessary for the purpose, applicable legal and accounting duties, dispute resolution, and fraud prevention. We consider sensitivity, operational need, contractual obligations, and legal requirements; we do not promise one universal deletion deadline. Provider-held records follow the provider\u2019s applicable schedule. Contact us for information about a particular record or request.",
+            "Agreement records: we retain the accepted document versions, server-recorded acceptance time, account and device identifiers, and acceptance method separately from expiring sign-in sessions, as reasonably necessary to establish the agreement and address legal claims. Account deletion does not automatically erase these limited records; you may request review of their retention.",
+            "Trial eligibility: we retain a keyed email-derived marker, an account identifier, and limited trial-use records while the account exists. After account deletion, these records are scheduled to expire after 180 days to prevent repeated free-trial claims. They contain no raw email address, card number, or screen content. Expiry cleanup can be delayed; contact support to request review."
+          ]
+        },
+        {
+          "id": "choices",
+          "title": "7. Choices and privacy requests",
+          "paragraphs": [
+            "Use Settings to change provider and screen-sharing choices and manage local data. Revoking permission stops future authorized access for that permission; it does not undo disclosures or completed actions. Cloud-account deletion is available in the app. To request access, correction, deletion, or a copy of cloud information, contact Support on the Carve legal website with the subject \u201cPrivacy request.\u201d",
+            "Depending on your location and whether the relevant law applies, you may have rights to know or access personal information, correct it, delete it, obtain a portable copy, restrict or object to processing, withdraw consent, opt out of covered advertising or sale/sharing, limit certain uses of sensitive information, or appeal a denied request. We will handle applicable requests within the legally required timeframe and explain any permitted extension or exception. We may verify identity and authority using proportionate information; do not send government ID unless specifically needed and requested securely.",
+            "California residents: where the CCPA applies, these rights include knowing the categories, sources, business purposes, recipient categories, and specific pieces of covered information. You may use an authorized agent, subject to appropriate verification, and may exercise rights without unlawful discrimination. Collection categories and purposes are in section 2; disclosure categories are in section 5; retention is in section 6. Because we do not sell or share information for covered advertising, there is currently no such activity to opt out of.",
+            "If an applicable state law gives you an appeal right, reply to the decision with \u201cPrivacy appeal.\u201d You may also contact the competent regulator. EEA/UK residents, where their laws apply, may complain to their data-protection authority and withdraw consent without affecting earlier lawful processing. We do not require you to waive privacy rights to use the Service."
+          ]
+        },
+        {
+          "id": "cookies",
+          "title": "8. Cookies and tracking signals",
+          "paragraphs": [
+            "The current public website does not include advertising trackers or third-party analytics scripts. Authentication and local preferences may use essential cookies, tokens, or local storage. Payment portals and independent sites have their own practices.",
+            "The Service does not track users across third-party websites for advertising. Do Not Track does not change its behavior. Global Privacy Control has no sale/sharing activity to disable under current practices; if a covered activity is introduced, we will provide required controls and honor applicable opt-out signals before it begins."
+          ]
+        },
+        {
+          "id": "international",
+          "title": "9. International processing",
+          "paragraphs": [
+            "Carve Cloud and its providers may process information in the United States and other countries where they operate. Those laws may differ from yours. Where applicable, transfers must use a lawful mechanism and required safeguards; this policy itself is not a substitute for a transfer agreement.",
+            "Where EEA/UK data-protection law applies, we process information as necessary to perform our contract, meet legal obligations, pursue legitimate interests such as security and service operation subject to your rights, or obtain consent where required. Contact us for information about an applicable transfer safeguard. Organization-directed processing may be governed by a separate data-processing agreement."
+          ]
+        },
+        {
+          "id": "children",
+          "title": "10. Children",
+          "paragraphs": [
+            "Carve is intended for adults age 18 and older. We do not knowingly collect children\u2019s information for their use of the Service. If you believe a child provided information, contact us so we can investigate and take appropriate action."
+          ]
+        },
+        {
+          "id": "security",
+          "title": "11. Security and changes",
+          "paragraphs": [
+            "We use technical and organizational measures intended to protect information, including authenticated service access and protections for credentials. No system is perfectly secure. Protect your device and accounts, review exports before sharing them, and report suspected vulnerabilities through Support.",
+            "We will publish revisions with a new version and date and provide additional notice and obtain consent when required for material changes. We will not silently treat a new policy as permission for an incompatible use of previously collected information."
+          ]
+        },
+        {
+          "id": "contact",
+          "title": "12. Contact",
+          "paragraphs": [
+            "For privacy questions, requests, or complaints, contact {{COMPANY_LEGAL_NAME}} using the Support contact on the Carve legal website. Include only the information needed to identify your request. Local-only content is ordinarily managed on your device, so cloud-account support may not have access to it."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ai-disclosure",
+      "title": "AI & computer control",
+      "eyebrow": "Before you begin",
+      "description": "Helpful intelligence. Real-world consequences.",
+      "summary": "Carve can explain what is on screen and take actions in your apps. You choose the task; AI does not make the result certain.",
+      "sections": [
+        {
+          "id": "ai",
+          "title": "01 / You are working with AI",
+          "paragraphs": [
+            "Carve\u2019s answers, plans, pointers, and completion reports are generated with AI. They can be wrong even when they sound confident. Verify important facts, destinations, calculations, and changes. A second AI check is not a guarantee."
+          ]
+        },
+        {
+          "id": "control",
+          "title": "02 / Actions affect your real accounts",
+          "paragraphs": [
+            "Computer control can click, type, navigate, use your clipboard, and edit content through your signed-in apps. It can lead to messages, purchases, uploads, or deletions. Review the task scope and supervision level before starting. Keep backups and remain available. Stopping prevents further work as the stop takes effect; it cannot retract a sent message or reverse every completed action."
+          ]
+        },
+        {
+          "id": "sharing",
+          "title": "03 / Screen content may go to a provider",
+          "paragraphs": [
+            "Hosted AI can receive selected window images, accessibility text, prompts, and relevant task context. Carve Cloud relays requests when selected; a directly configured provider receives requests directly. Provider retention and local task history are separate. Close sensitive content before capturing; automated redaction is not foolproof."
+          ]
+        },
+        {
+          "id": "permissions",
+          "title": "04 / Permission is a choice, not a waiver",
+          "paragraphs": [
+            "Review screen-sharing consent and the provider shown in the app. Adjust or revoke consent in Settings and macOS permissions. An operating-system permission is not authorization for every possible action, and accepting the Terms does not approve a purchase or a message. Review high-impact steps before execution."
+          ]
+        },
+        {
+          "id": "limits",
+          "title": "05 / Keep people in charge of important decisions",
+          "paragraphs": [
+            "Do not rely on Carve for emergencies, safety-critical control, or professional advice. Obtain qualified advice where appropriate. You remain responsible for lawful access and for reviewing work, while your mandatory legal rights and Carvify\u2019s nonwaivable obligations remain intact."
+          ]
+        },
+        {
+          "id": "stop",
+          "title": "06 / Pause, inspect, and verify",
+          "paragraphs": [
+            "Use the app\u2019s pause or stop controls and the emergency-stop shortcut shown in Settings if anything looks wrong. Review the actual destination app before treating a task as complete. If an action has already happened, inspect the result and use that app\u2019s recovery tools where available."
+          ]
+        }
+      ]
+    }
+  ]
+}

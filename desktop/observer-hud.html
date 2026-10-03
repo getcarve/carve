@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'" />
+    <title>Carve observing</title>
+    <style>
+      :root { color-scheme: dark; }
+      html, body { margin: 0; height: 100%; background: transparent; overflow: hidden; }
+      body {
+        display: flex;
+        align-items: center;
+        font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
+        -webkit-user-select: none;
+        -webkit-app-region: drag;
+      }
+      .pill {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        box-sizing: border-box;
+        margin: 6px;
+        padding: 10px 14px;
+        border-radius: 15px;
+        background: rgba(24, 22, 19, 0.92);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.32);
+      }
+      .dot {
+        flex: none;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #e5484d;
+        opacity: 0.42;
+        transition: opacity 140ms ease, box-shadow 140ms ease;
+      }
+      /* Lit only while an observation was actually stored. */
+      body[data-pulse="1"] .dot { opacity: 1; box-shadow: 0 0 0 4px rgba(229, 72, 77, 0.28); }
+      body[data-paused="true"] .dot { background: #f5a524; opacity: 0.6; box-shadow: none; }
+      body[data-waiting="true"] .dot { background: #f5a524; opacity: 0.85; box-shadow: none; }
+      .text { min-width: 0; flex: 1; }
+      .label {
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.62);
+      }
+      .detail {
+        margin-top: 2px;
+        font-size: 12px;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.95);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .stop {
+        flex: none;
+        min-width: 52px;
+        padding: 7px 10px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+        color: rgba(255, 255, 255, 0.95);
+        background: rgba(255, 255, 255, 0.1);
+        font: inherit;
+        font-size: 11px;
+        font-weight: 700;
+        cursor: pointer;
+        -webkit-app-region: no-drag;
+      }
+      .stop:hover { background: rgba(229, 72, 77, 0.34); border-color: rgba(255, 140, 140, 0.48); }
+      .stop:active { background: rgba(229, 72, 77, 0.48); }
+      .stop:focus-visible { outline: 2px solid rgba(255, 255, 255, 0.78); outline-offset: 2px; }
+    </style>
+  </head>
+  <body data-pulse="0" data-paused="false" data-waiting="false">
+    <div class="pill">
+      <span class="dot"></span>
+      <div class="text">
+        <div class="label" id="label">Carve observing</div>
+        <div class="detail" id="detail">0 observations</div>
+      </div>
+      <button class="stop" id="stop" type="button" aria-label="Stop observation">Stop</button>
+    </div>
+    <script>
+      document.getElementById('stop').addEventListener('click', () => window.stewardObserver.stop())
+    </script>
+  </body>
+</html>

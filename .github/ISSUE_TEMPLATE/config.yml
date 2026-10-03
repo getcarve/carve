@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Report a security problem privately
+    url: https://github.com/getcarve/carve/security/advisories/new
+    about: A way to make Carve act outside the chosen window, skip an approval, or follow text on the screen. Please do not open a public issue.

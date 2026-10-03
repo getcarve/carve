@@ -1,0 +1,58 @@
+{
+  "name": "carve-desktop",
+  "productName": "Carve",
+  "version": "0.1.10",
+  "private": true,
+  "license": "AGPL-3.0-only",
+  "description": "An AI copilot for understanding and working in your selected Mac window.",
+  "main": "dist/desktop/main.js",
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev": "concurrently --kill-others --names API,UI --prefix-colors green,cyan \"npm:dev:api\" \"npm:dev:ui\"",
+    "dev:api": "tsx watch src/server.ts",
+    "dev:ui": "vite",
+    "start": "node dist/src/server.js",
+    "desktop": "npm run build && electron .",
+    "desktop:dev": "npm run build && electron .",
+    "desktop:app": "npm run package:mac -- --launch",
+    "package:mac": "npm run build && node --import tsx scripts/package-macos.ts",
+    "config:migrate:mac": "node --import tsx scripts/migrate-local-provider-config.ts",
+    "build": "npm run build:ui && npm run build:core && npm run build:desktop-assets && npm run build:native-helper",
+    "build:ui": "vite build",
+    "build:core": "tsc -p tsconfig.json",
+    "build:desktop-assets": "node --import tsx scripts/copy-desktop-assets.ts",
+    "build:native-helper": "node --import tsx scripts/build-native-helper.ts",
+    "typecheck": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p tsconfig.ui.json",
+    "lint": "eslint src desktop ui scripts public/app.js vite.config.ts",
+    "eval:injection": "node --import tsx scripts/evaluate-injection-gauntlet.ts && node --import tsx scripts/evaluate-default-engine-gauntlet.ts"
+  },
+  "devDependencies": {
+    "@electron/asar": "^4.2.1",
+    "@electron/fuses": "2.1.3",
+    "@electron/packager": "^20.3.0",
+    "@eslint/js": "9.39.5",
+    "@types/node": "26.1.1",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "@vitejs/plugin-react": "^6.0.5",
+    "concurrently": "^10.0.5",
+    "electron": "^43.7.7",
+    "eslint": "9.39.5",
+    "globals": "16.5.0",
+    "tsx": "4.23.8",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.66.0",
+    "vite": "^8.2.1"
+  },
+  "dependencies": {
+    "@types/pngjs": "^6.0.5",
+    "lucide-react": "^1.31.0",
+    "playwright-core": "^1.62.1",
+    "pngjs": "^7.0.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  }
+}

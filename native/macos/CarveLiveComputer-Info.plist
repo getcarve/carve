@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>CFBundleDevelopmentRegion</key>
+  <string>en</string>
+  <key>CFBundleDisplayName</key>
+  <string>Carve Live Computer</string>
+  <key>CFBundleExecutable</key>
+  <string>Carve Live Computer</string>
+  <key>CFBundleIdentifier</key>
+  <string>app.carve.desktop.live-computer</string>
+  <key>CFBundleInfoDictionaryVersion</key>
+  <string>6.0</string>
+  <key>CFBundleName</key>
+  <string>Carve Live Computer</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>LSUIElement</key>
+	<true/>
+  <key>CFBundleShortVersionString</key>
+  <string>0.1.0</string>
+  <key>CFBundleVersion</key>
+  <string>1</string>
+  <key>NSAccessibilityUsageDescription</key>
+  <string>Carve Live Computer sends only individually approved input events to one selected window.</string>
+  <key>NSScreenCaptureUsageDescription</key>
+  <string>Carve Live Computer captures only the window selected for this live session.</string>
+</dict>
+</plist>
